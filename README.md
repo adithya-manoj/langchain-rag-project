@@ -41,13 +41,17 @@ langchain-rag-project/
    ```
 
 4. **Add documents:**
-   - Place your documents in the `data/` directory
-   - Supported formats: PDF, TXT, MD, DOCX
+   - Place your documents in the `data/` directory (e.g. `.txt` files; see `data/README.md`).
 
 5. **Run the application:**
-   ```bash
-   python -m ui.cli
-   ```
+   - **Ingest documents** (build the FAISS index from `data/`):
+     ```bash
+     python -m app.ingest
+     ```
+   - **Chat/CLI** (RAG Q&A) is not implemented yet; once `retriever`, `chat`, and `ui/cli` are wired up, you will run:
+     ```bash
+     python -m ui.cli
+     ```
 
 ## Features
 

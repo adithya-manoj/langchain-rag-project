@@ -1,3 +1,7 @@
 LangChain is a framework for building LLM-powered applications.
 RAG stands for Retrieval-Augmented Generation.
 FAISS is used for vector similarity search.
+LangChain is a framework for building LLM-powered applications.
+RAG stands for Retrieval-Augmented Generation.
+FAISS is used for efficient similarity search.
+Ollama allows running LLMs locally.

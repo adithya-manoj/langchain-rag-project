@@ -3,7 +3,7 @@ Document ingestion: load → chunk → embed → store in FAISS
 """
 
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
@@ -23,6 +23,7 @@ def ingest_documents():
     print(f"Loaded {len(documents)} documents")
 
     # 2️⃣ Split documents into chunks
+    # Because LLMs have token limits.
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=500,
         chunk_overlap=100,
@@ -43,3 +44,7 @@ def ingest_documents():
     vectorstore.save_local(INDEX_PATH)
 
     print("Ingestion complete. FAISS index saved.")
+
+
+if __name__ == "__main__":
+    ingest_documents()
