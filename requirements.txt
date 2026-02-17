@@ -1,0 +1,20 @@
+# Core LangChain dependencies
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-openai>=0.1.0
+
+# Vector database
+faiss-cpu>=1.7.4
+# chromadb>=0.4.0  # Uncomment if using ChromaDB
+
+# Document loaders
+pypdf>=3.0.0
+# python-docx>=1.0.0  # Uncomment if processing Word documents
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Utilities
+tqdm>=4.65.0
+
+
